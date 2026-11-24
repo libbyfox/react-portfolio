@@ -1,8 +1,8 @@
-function Project() {
-    return (
+function Project(props) { 
+       return (
         <div className="project">
-            <h2>Project Name</h2>
-            <p>Project description goes here.</p>
+            <h2>{props.name}</h2>
+            <p>{props.description}</p>
         </div>
     );
 }
