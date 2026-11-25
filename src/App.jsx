@@ -13,6 +13,9 @@ function App() {
     description="An informational website showing visitors how to create life-size paper puppets, with materials and step-by-step instructions."
     githubLink="https://github.com/libbyfox/life-size-paper-puppets"
     screenshot={paperPuppets}
+    technologies="HTML, CSS, Bootstrap"
+    learned="How to use Bootstrap classes to create a webpage layout and customise it with my own CSS."
+    challenges="Combining Bootstrap styles with my own CSS to create a unique design."
 />
 
 <Project
@@ -20,6 +23,9 @@ function App() {
     description="A responsive recipe website recreated from a Figma design, adapting to different screen sizes using Flexbox and media queries."
     githubLink="https://github.com/libbyfox/responsive-design-assignment"
     screenshot={recipes}
+    technologies="HTML, CSS, Flexbox"
+    learned="How to create responsive layouts using Flexbox, media queries and responsive CSS properties."
+    challenges="Recreating a Figma design and making it look good across different screen sizes."
 />
 
 <Project
@@ -27,6 +33,9 @@ function App() {
     description="An event invitation webpage featuring custom SVG graphics, CSS transitions, keyframe animations and Animate.css effects."
     githubLink="https://github.com/libbyfox/svg-and-animation-project"
     screenshot={puppetShow}
+    technologies="HTML, CSS, SVG, Animate.css"      
+    learned="How to create SVG graphics and use CSS transitions, keyframe animations and Animate.css."
+    challenges="Creating SVG graphics and combining different animation techniques in one webpage."
 />
         </div>
     );
