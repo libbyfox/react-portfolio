@@ -2,12 +2,21 @@ import Project from "../components/Project.jsx";
 import paperPuppets from "../assets/lifesize.jpg";
 import recipes from "../assets/responsive-design-screenshot.jpg";
 import puppetShow from "../assets/puppet-show-screenshot.png";
+import { useState } from "react";
 
 function Portfolio() {
+    const [showProjects, setShowProjects] = useState(false);
     return (
         <div>
             <h1>Portfolio</h1>
             <p>Here are my projects.</p>
+
+            <button onClick={() => setShowProjects(true)}>
+             Preview Projects
+            </button>
+
+{showProjects ? (
+    <div>
 
             <Project
                 name="Life-Size Paper Puppets"
@@ -39,7 +48,11 @@ function Portfolio() {
                 challenges="Creating SVG graphics and combining different animation techniques in one webpage."
             />
         </div>
+) : null}
+                </div>
+
     );
+
 }
 
 export default Portfolio;
