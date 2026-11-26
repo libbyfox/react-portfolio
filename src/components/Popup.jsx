@@ -1,7 +1,8 @@
 import "./Popup.css";
 
 function Popup(props) {
-    return (
+   return (
+    <div className="popup-backdrop">
         <div className="popup">
             <h2>{props.name}</h2>
             <img src={props.screenshot} alt={props.name} />
@@ -12,7 +13,8 @@ function Popup(props) {
             <p>Challenges: {props.challenges}</p>
             <button onClick={props.onClose}>Close</button>
         </div>
-    );
+    </div>
+);
 }
 
 export default Popup;
