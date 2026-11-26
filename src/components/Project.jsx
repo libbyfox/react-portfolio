@@ -2,7 +2,7 @@ import "./project.css";
 
 function Project(props) {
     return (
-        <div className="project">
+        <div className="project" onClick={props.onClick}>
             <div className="project-info">
                 <h2>{props.name}</h2>
                 <p>{props.description}</p>
