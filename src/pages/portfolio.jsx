@@ -21,6 +21,7 @@ const projects = [
         githubLink: "https://github.com/libbyfox/life-size-paper-puppets",
         screenshot: paperPuppets,
         technologies: "HTML, CSS, Bootstrap",
+        tags: ["HTML", "CSS", "Bootstrap"],
         learned: "How to use Bootstrap classes to create a webpage layout and customise it with my own CSS.",
         challenges: "Combining Bootstrap styles with my own CSS to create a unique design."
     },
@@ -30,6 +31,7 @@ const projects = [
         githubLink: "https://github.com/libbyfox/responsive-design-assignment",
         screenshot: recipes,
         technologies: "HTML, CSS, Flexbox",
+        tags: ["HTML", "CSS", "Flexbox"],
         learned: "How to create responsive layouts using Flexbox, media queries and responsive CSS properties.",
         challenges: "Recreating a Figma design and making it look good across different screen sizes."
     },
@@ -39,6 +41,7 @@ const projects = [
         githubLink: "https://github.com/libbyfox/svg-and-animation-project",
         screenshot: puppetShow,
         technologies: "HTML, CSS, SVG, Animate.css",
+        tags: ["HTML", "CSS", "SVG", "Animate.css"],
         learned: "How to create SVG graphics and use CSS transitions, keyframe animations and Animate.css.",
         challenges: "Creating SVG graphics and combining different animation techniques in one webpage."
     }
@@ -62,10 +65,12 @@ const projects = [
     onChange={(e) => setSearch(e.target.value)}
 />
 {projects
-    .filter((project) =>
-        project.name.toLowerCase().includes(search.toLowerCase()) ||
-        project.technologies.toLowerCase().includes(search.toLowerCase())
+   .filter((project) =>
+    project.name.toLowerCase().includes(search.toLowerCase()) ||
+    project.tags.some((tag) =>
+        tag.toLowerCase().includes(search.toLowerCase())
     )
+)
     .map((project) => (    <Project
         key={project.name}
         name={project.name}
