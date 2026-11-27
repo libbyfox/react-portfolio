@@ -9,8 +9,10 @@ import Popup from "../components/Popup.jsx";
 function Portfolio() {
     const [showProjects, setShowProjects] = useState(false);
     const [selectedProject, setSelectedProject] = useState(null);
+     const [search, setSearch] = useState("");
     const handleProjectClick = (project) => {
     setSelectedProject(project);
+   
 };
 const projects = [
     {
@@ -53,8 +55,18 @@ const projects = [
 {showProjects ? (
     <div>
 
-          {projects.map((project) => (
-    <Project
+<input
+    type="text"
+    placeholder="Search projects..."
+    value={search}
+    onChange={(e) => setSearch(e.target.value)}
+/>
+{projects
+    .filter((project) =>
+        project.name.toLowerCase().includes(search.toLowerCase()) ||
+        project.technologies.toLowerCase().includes(search.toLowerCase())
+    )
+    .map((project) => (    <Project
         key={project.name}
         name={project.name}
         description={project.description}
@@ -66,7 +78,7 @@ const projects = [
         onClick={() => handleProjectClick(project)}
     />
 ))}
-               /
+               
         </div>
 ) : null}
               {selectedProject && (
